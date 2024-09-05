@@ -28,7 +28,7 @@ openssl passwd your_password
 ```
 4.启动脚本
 ```
-start.sh        #启动并创建容器，自动安装scrcpy-web/apk下的安装包
+start.sh        #启动并创建容器，自动安装scrcpy-web/apk下的安装包(目前放了应用宝、豌豆荚、via浏览器，作为初始环境应该够用了，需要其它应用可以自己将apk放在这个目录里)
 stop.sh         #关闭容器
 restart.sh      #重启容器
 stop_and_rm.sh  #关闭并删除容器

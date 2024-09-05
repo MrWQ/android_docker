@@ -24,6 +24,7 @@ docker exec -it ${SCRCPY} adb connect ${REDROID}:5555
 echo -e "\n 4.create android:nginx"
 docker run -d -v ./nginx/nginx.conf:/etc/nginx/nginx.conf -v ./nginx/passwd_scrcpy_web:/etc/nginx/passwd_scrcpy_web -v ./nginx/conf.d:/etc/nginx/conf.d -p 8888:80 --name ${NGINX} --link ${SCRCPY} nginx:1.24
 
+sleep 5
 echo -e "\n 5.install APK"
 for file in ` ls ./scrcpy-web/apk`
 do
